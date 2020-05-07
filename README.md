@@ -1,1 +1,1 @@
-# subimage_highlighter
+# Subimage Highlighter

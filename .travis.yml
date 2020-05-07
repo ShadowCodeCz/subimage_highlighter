@@ -1,0 +1,18 @@
+language: python
+python:
+- '3.6'
+- '3.7'
+- '3.8'
+- 3.9-dev
+install:
+- pip install .
+script:
+- pytest
+deploy:
+  provider: pypi
+  user: __token__
+  password:
+    secure: IqHa8t4tiRvCfh21rSFluJHfWxAZaNYB3qU1YFsvcmhRz2uMo+RntQZvWIzFJt16WN/c0O3+yb7KT3V5t6IE+BHR61UR/5nGtmWunJ4ULhUxQCozOYQN8yVE/P3pk8v3APSpPIW9GX6mZHbeY1aXKeEi1i+1skj0Pe0jPcmiqGw2/czqTy55/FfyZ8aDvxJgpf7SYn/oUXSfsh9X7foZQIVkfH4+RUTTRkDpRnyZcYpIjGmQx3zOI9EBg4hPtPjIRrbt6cQ2DeXGSzEQhM4SSOnCkL4yaYDjwBBRomIeH5ivzojz1sF2FXW/8C8GfYvqBhdFNuzAyIu7G9ov0pnt9xeziRWyAjGO2RLFb+o+EhIiqyNoUVfbNuPLlPzhfVFj7+SAdknSXZIZxN+4n1Zrijizbz1ZoCwzTcsg7se5HsdDenThPOaALzrHsuVmvZixaiMdeWEAzygtpi2UEeBbrxgRGRWQskPWVdxh9q0NfnjNwSSG4H/OEONkM88d3pngzoo6ef74NBmtWwZwGm8vwVPxRoV7sJScKklVmXffqSvB02OuTMVdL0kefh+bMi7/kOY2IZ/ibqRbJ6Fb82bjqO+0xfGE2/mPYX978Bdq3Iu2Jv+ZLGXHW85MLNfVEDFgb52rP6eMz6BBkOMMrr/1EC8TWR3D+1FyETE63OChU6s=
+  on:
+    tags: true
+    python: 3.6
